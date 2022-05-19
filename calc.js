@@ -9,6 +9,7 @@ const action = ["-", "+", "X", "/"];
 // screen
 const out = document.querySelector(".calc-screen p");
 
+
 function clearAll() {
   a = ''; // first number and result
   b = ''; // second number
@@ -81,7 +82,8 @@ document.querySelector(".buttons").onclick = (event) => {
         break;
     }
     finish = true; 
-    out.textContent = a;
+  
+    out.textContent = Number(a.toFixed(7));
     console.log( a, b, sign);
   }
 };
